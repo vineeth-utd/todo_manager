@@ -1,0 +1,105 @@
+body{
+  font-family: sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 32px;
+}
+.TodoPageMain{
+  align-items: center;
+  justify-content: center;
+}
+.TodoPage-title{
+  font-size: 48px;
+  line-height: 1.6;
+  color: #8b0000;
+}
+.TodoSection-title{
+  font-size: 34px;
+  line-height: 1.4;
+  color: #453C52;
+}
+.AddTodo{
+  height: 32px;
+  align-items: stretch;
+  margin-bottom: 24px;
+}
+.AddTodo-text{
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #453C52;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #BFB8CC;
+}
+.AddTodo-date{
+  padding: 6px;
+  font-size: 14px;
+  color: #453C52;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #BFB8CC;
+}
+.AddTodo-button{
+  font-size: 14px;
+  color: white;
+  background-color: #488878;
+  border: 1px solid transparent;
+  padding: 6px 22px;
+  border-radius: 4px;
+}
+.TodoItem{
+
+}
+h3{
+  font-size: 24px;
+  line-height: 1.4;
+  color: #453C52;
+}
+.TodoSection-todo{
+  font-size: 20px;
+  line-height: 1.2;
+  margin-left: 32px;
+  color: #453C52;
+}
+.TodoSection{
+  margin-bottom: 20px;
+}
+.TodoSectionTitle{
+  display: flex;
+  color: #453C52;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.TodoSectionTitle-text{
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 8px;
+  line-height: 1.4;
+}
+.TodoItem-checkbox{
+  width: 16px;
+  height: 16px;
+}
+.TodoItem-Container{
+  display:flex ;
+  padding: 2px 8px;
+  align-items: center;
+}
+.TodoItem-overdueLabel{
+  margin-left: 10px;
+  color: #C53030;
+  font-size: 12px;
+}
+.TodoItem-delete{
+
+  margin-left: 8px;
+}
+.TodoItem-Container:hover{
+  background-color: #F1EDF7;
+}
+
+.TodoItem-remainingOverdueLabel{
+  margin-left: 10px;
+  color: #BFB8CC;
+  font-size: 12px;
+}
