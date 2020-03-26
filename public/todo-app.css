@@ -89,11 +89,14 @@ h3{
 }
 .TodoItem-delete{
   margin-left: 8px;
+  visibility: hidden;
 }
 .TodoItem-Container:hover{
   background-color: #F1EDF7;
 }
-
+.TodoItem-Container:hover > .TodoItem-delete{
+  visibility: visible;
+}
 .TodoItem-remainingOverdueLabel{
   margin-left: 10px;
   color: #BFB8CC;
