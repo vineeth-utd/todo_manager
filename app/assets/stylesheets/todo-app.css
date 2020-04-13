@@ -77,6 +77,9 @@ h3{
   width: 16px;
   height: 16px;
 }
+.TodoItem-completedText{
+ text-decoration: line-through;
+}
 .TodoItem-dueDate{
   font-size: 10px;
   color: rgb(103,89,123);

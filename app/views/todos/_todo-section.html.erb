@@ -11,13 +11,17 @@
       <% else %>
         <li class="TodoItem">
           <label class="TodoItem-Container">
-            <% if todo.completed %>
-              <input class="TodoIt-Checkbox" type="checkbox" checked>
-              <p style="text-decoration: line-through"><%= todo.todo_text%></p>
-            <% else %>
-              <input class="TodoIt-Checkbox" type="checkbox">
-              <p><%= todo.todo_text%></p>
+            <%= form_with(url: "/todos/#{todo.id}" , method: "PUT") do %>
+              <input class="TodoIt-Checkbox"
+                name="completed"
+                type="checkbox" <%= todo.completed ? "checked" : "" %>
+                onclick="this.form.submit()"
+              >
             <% end %>
+
+            <p class="<%= todo.completed ? "TodoItem-completedText" : "" %>">
+              <%= todo.todo_text%>
+            </p>
 
             <% if show_due_date %>
               <p class="TodoItem-dueDate"> <%= todo.due_date.to_s(:short) %> </p>
