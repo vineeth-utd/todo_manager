@@ -21,7 +21,7 @@ body{
 .AddTodo{
   height: 32px;
   align-items: stretch;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
 }
 .AddTodo-text{
   padding: 6px 12px;
@@ -107,3 +107,4 @@ h3{
   color: #BFB8CC;
   font-size: 12px;
 }
+/* <input class="AddTodo-text" type="text" placeholder="What's next?" name="todo_text"> */
