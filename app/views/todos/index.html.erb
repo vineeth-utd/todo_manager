@@ -1,8 +1,8 @@
 <main class="TodoPageMain">
     <h1 class="TodoPage-title">My Todo-list</h1>
     <%= form_with(url: "/todos", method: "POST", class: "AddToDo") do %>
-      <%= text_field_tag("#{todo_text}", nil, placeholder: "What's next", class: "AddTodo-text") %>
-      <% end %>
+      <input class="AddTodo-text" type="text" placeholder="What's next?" name="todo_text">
+      text_field_tag #{todo_text}, value  = nil, options= {class="ADDtOdo-text" placeholder="What's next?"}
       <input class="AddTodo-date" type="date" name="due_date">
       <input class="AddTodo-button" type="submit" value="Add">
     <% end %>
