@@ -5,12 +5,16 @@ class UsersController < ApplicationController
     render plain: User.all.map { |t| t.to_pleasant_string }.join("\n")
   end
 
+  def new
+    render "/users/new"
+  end
+
   def create
-    name = params[:name]
-    email = params[:email]
-    password = params[:password]
-    user = User.create!(name: name, email: email, password: password)
-    render plain: "User created with id #{user.id}"
+    user = User.create!(first_name: params[:first_name],
+                        last_name: params[:last_name],
+                        email: params[:email])
+    #password_digest: digest(params[:password]))
+    redirect_to "/"
   end
 
   def show
