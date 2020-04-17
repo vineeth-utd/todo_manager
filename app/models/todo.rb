@@ -1,4 +1,8 @@
 class Todo < ActiveRecord::Base
+  validates :todo_text, presence: true
+  validates :todo_text, length: { minimum: 2 }
+  validates :due_date, presence: true
+
   belongs_to :user
 
   def self.overdue
@@ -23,30 +27,5 @@ class Todo < ActiveRecord::Base
 
   def self.completed
     all.where(completed: true)
-  end
-
-  def self.show_list
-    puts "\nMy Todolist"
-    puts "\nOverdue"
-    puts overdue.map { |todo| todo.to_displayable_string }
-    puts "\nDue Today"
-    puts due_today.map { |todo| todo.to_displayable_string }
-    puts "\nDue Later"
-    puts due_later.map { |todo| todo.to_displayable_string }
-  end
-
-  def self.add_task(todo)
-    create!(
-      todo_text: todo[:todo_text],
-      due_date: Date.today + todo[:due_in_days],
-      completed: false,
-    )
-  end
-
-  def self.mark_as_complete!(todo_id)
-    todo = Todo.find(todo_id)
-    todo.completed = true
-    todo.save
-    todo
   end
 end
